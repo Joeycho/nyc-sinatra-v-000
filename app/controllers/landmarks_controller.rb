@@ -19,7 +19,7 @@ class LandmarksController < ApplicationController
   
    post '/figures' do
     
-    @landmark = Landmark.create(:name => params[:landmark][:name], :year_completed => params[:landmark][:year_completed])
+    @landmark = Landmark.create(:name => params[:landmark][:name])
     
     @landmark.save
 
