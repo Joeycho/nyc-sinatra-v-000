@@ -17,6 +17,16 @@ class LandmarksController < ApplicationController
     erb :'landmarks/edit'
   end
   
+   post '/figures' do
+    @landmark = Landmark.create(:name => params[:landmark][:name], :year_completed => params[:landmark][:year_completed])
+    
+    @landmark.save
+
+    flash[:message] = "Successfully created landmark."
+
+    redirect("/landmarks/#{@landmark.id}")
+  end
+  
   patch '/landmarks/:id' do
     
     @landmark = Landmark.find(params[:id])
