@@ -17,9 +17,8 @@ class LandmarksController < ApplicationController
     erb :'landmarks/edit'
   end
   
-   post '/figures' do
+   post '/landmarks' do
      
-    binding.pry
     @landmark = Landmark.create(:name => params[:landmark][:name])
     @landmark.year_completed = params[:landmark][:year_completed]
     
