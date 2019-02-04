@@ -2,15 +2,13 @@
 
 <form action="/landmarks" method="POST">
   <label for="landmark_name"> Landmark Name </label>
-  <input type="text" name="landmark[name]" id="land_name"> </br>
+  <input type="text" name="landmark[name]" id="landmark_name"> </br>
   
-  <h2>Choose one figure</h2> </br>
-  <% Figure.all.each do |figure| %>
-  <label for="figure_<%=figure.id %>"><%= figure.name %></label>
-  <input type="radio" id="figure_<%= figure.id %>" name="landmark[figure_id]" value="<%=figure.id%>"> </br>
-  <% end %>
-  <h2>Create New Figure</h2> </br>
-  <input type="text" name="figure[name]" id="new_figure"> </br>
+  <label for="landmark_year_completed"> Landmark Year </label>
+  <input type="text" name="landmark[year_completed]" id="landmark_year_completed"> </br>
+  
+  
+  
   
   
   <input type="submit" value="Create New Landmark">
