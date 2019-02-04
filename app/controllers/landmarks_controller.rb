@@ -22,7 +22,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
     
-    @figure.save
+    @landmark.save
 
     flash[:message] = "Successfully updated landmark."
     
