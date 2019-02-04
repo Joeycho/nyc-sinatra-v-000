@@ -2,12 +2,12 @@
 
 <form action="/landmarks" method="POST">
   <label for="landmark_name"> Landmark Name </label>
-  <input type="text" name="landmark[name]" id="figure_name"> </br>
+  <input type="text" name="landmark[name]" id="land_name"> </br>
   
-  <h2>Titles</h2> </br>
-  <% Title.all.each do |title| %>
-  <label for="title_<%=title.id %>"><%= title.name %></label>
-  <input type="checkbox" id="title_<%= title.id %>" name="figure[title_ids][]" value="<%= title.id %>"> </br>
+  <h2>Figures</h2> </br>
+  <% Figure.all.each do |figure| %>
+  <label for="figure_<%=figure.id %>"><%= figure.name %></label>
+  <input type="checkbox" id="figure_<%= figure.id %>" name="landmark[figure_id][]" value="<%= figure.id %>"> </br>
   <% end %>
   <h2>Create New Title:</h2> </br>
   <input type="text" name="title[name]" id="new_title"> </br>
